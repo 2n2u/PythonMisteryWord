@@ -41,7 +41,7 @@ while count < tries and found == 0:
     #call the function to show the interface
     funs.interface(result, word, misses)
     #ask for the guess of the user
-    guess = input("What is your guess? ")
+    guess = raw_input("What is your guess? ")
     #if the guess isn't valid, it will ask again till it's valid
     while not str.isalpha(guess) or funs.checkuse(guess, right, misses) == 1 \
     or len(guess)!=1:
@@ -66,12 +66,12 @@ while count < tries and found == 0:
                                   "Tries used - " + str(count) + "/" + \
                                   str(tries) + " | The word was " + word.upper()
         #Ask if the user wants to start a new game
-        newgame = input("Congratulations, you've found the word! It's " + \
+        newgame = raw_input("Congratulations, you've found the word! It's " + \
                                   word.upper() + \
                                   "! Do you want to start a new game? (Y/N)\n")
         while (not str.isalpha(newgame)) or (newgame != 'y' and newgame \
             != 'Y' and newgame != 'n' and newgame != 'N'):
-            newgame = input("That's not a valid answer!"
+            newgame = raw_input("That's not a valid answer!"
             "Do you want to start a new game? (Y/N)\n")
         #If the user says yes, all variables are reset to the initial state
         #and a new word is generated
